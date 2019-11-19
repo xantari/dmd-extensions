@@ -300,6 +300,12 @@ This application is based on .NET 4.5, which only runs on Windows 7 or later.
 Probably on Vista too, but who cares. If you're still running WinXP then you
 have my sincerest sympathy, but that's as far as I go. ;)
 
+## Breaking Changes
+
+Since version 1.8 data types in configuration files are now culture invariant. Meaning if you are running under a Windows UI Culture 
+such as German which normally represents decimals with commas instead of periods you will need to change your configuration file 
+(such as DMDDevice.ini) to use periods for decimal data. The most common example would be those users who are using `dotsize` setting
+in your DMDDevice.ini. This was done to standardize the format of numeric data accross different languages.
 
 ## Troubleshooting
 
